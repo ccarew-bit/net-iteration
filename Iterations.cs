@@ -27,7 +27,7 @@ namespace DotnetIteration
    */
     public static IEnumerable<string> Yelling(List<string> words)
     {
-      throw new System.NotImplementedException();
+      return words.Select(word => word.ToUpper());
     }
 
     /* 
@@ -38,7 +38,8 @@ namespace DotnetIteration
 
     public static IEnumerable<int> Double(List<int> numbers)
     {
-      throw new System.NotImplementedException();
+      var doubleTrouble = numbers.Select(number => number * 2);
+      return doubleTrouble;
     }
     /*
       * 3) Define a function stringyIndexes() that takes an list of
@@ -47,7 +48,8 @@ namespace DotnetIteration
       */
     public static IEnumerable<string> StringyIndexes(List<string> data)
     {
-      throw new System.NotImplementedException();
+      var stringyIndexes = data.Select(dataOf => { return dataOf + " is at index " + data.IndexOf(dataOf); });
+      return stringyIndexes;
     }
     /*
        * 4) Define a function onlyTheEvenSurvive that accepts an list of
@@ -56,7 +58,8 @@ namespace DotnetIteration
 
     public static IEnumerable<int> OnlyTheEvenSurvive(List<int> data)
     {
-      throw new System.NotImplementedException();
+      var onlyTheEvenSurvive = data.Where(dataOf => dataOf % 2 == 0);
+      return onlyTheEvenSurvive;
     }
     /*
         * 5) Define a function onlyTheEvenIndexedSurvive that accepts an list of
@@ -64,7 +67,9 @@ namespace DotnetIteration
         */
     public static IEnumerable<int> OnlyTheEvenIndexedSurvive(List<int> data)
     {
-      throw new System.NotImplementedException();
+      //var onlyTheEvenIndexedSurvive = data.Where(dataOf => { return data.IndexOf(dataOf) % 2 == 0; });
+      //return onlyTheEvenIndexedSurvive;
+      return data.Where((w, i) => i % 2 == 0);
     }
     /*
       * 6)  Define a function bestMoviesOfTheYear that accepts an list of
@@ -81,7 +86,7 @@ namespace DotnetIteration
       */
     public static IEnumerable<string> BestMovieOfTheYear(List<Movie> data, int year)
     {
-      throw new System.NotImplementedException();
+      return data.Where(movie => movie.Score > 90 && movie.Year == year).Select(movie => movie.Name);
     }
 
     /*
@@ -92,6 +97,9 @@ namespace DotnetIteration
 
     public static bool EveryoneIsOdd(List<int> data)
     {
+      //bool everyOneIsOdd = data.Any(dataOf => dataOf % 2 >= 1);
+      //everyOneIsOdd = !everyOneIsOdd;
+      //return everyOneIsOdd;
       throw new System.NotImplementedException();
     }
     /*
@@ -101,7 +109,10 @@ namespace DotnetIteration
       */
     public static string FindTheNeedle(List<string> data)
     {
-      throw new System.NotImplementedException();
+      var findTheNeedle = data.Contains("needle");
+      {
+        return data.Contains("needle").Select(data.string);
+      }
     }
 
 
